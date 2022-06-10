@@ -1,0 +1,107 @@
+<header>
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Tareas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Filtrar tareas
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Terminadas</a></li>
+              <li><a class="dropdown-item" href="#">Sin terminar</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Introduce la tarea" aria-label="Buscar tarea">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="text-center">
+  <h1>Bienvenidos a mi {{ title }}</h1>
+</div>
+</header>
+<div class="container">
+  <button (click)="Listar()" class="btn btn-primary">Listar</button>
+  <button (click)="Nuevo()" class="btn btn-primary" style="margin-left: 10px;">Nueva Tarea</button>
+</div>
+<footer>
+<nav aria-label="...">
+  <ul class="pagination">
+    <li class="page-item disabled">
+      <span class="page-link">Previous</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item active" aria-current="page">
+      <span class="page-link">2</span>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+</footer>
+<router-outlet></router-outlet>
+
+
+<!-- <h3>{{ username }}</h3>
+<h3>{{ itemCount }}</h3>
+
+<h2>{{itemCount}} {{ showComplete ? "Items completos" : "Items imcompletos" }}</h2>
+
+<thead>
+  <tr>
+    <th>#</th>
+    <th>Descripcion</th>
+    <th>Hecho</th>
+  </tr>
+</thead>
+<tbody>
+  <tr *ngFor="let item of items; let i = index">
+
+    <td>{{i + 1}}</td>
+
+    <td>{{item.task}}</td>
+
+    <td [ngSwitch]="item.complete">
+
+      <span *ngSwitchCase="true">SI</span>
+
+      <span *ngSwitchDefault>NO</span>
+
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+              <input class="form-control" placeholder="Introduzca su nueva tarea" #todoText>
+          </div>
+          <div class="col-auto">
+              <button class="btn btn-primary" (click)="agregarItem(todoText.value)">
+                Agregar</button>
+          </div>
+        </div>
+      </div>
+      <div class="bg-secondary text-white text-center p-2">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" [(ngModel)]="showComplete">
+          <label class="form-check-label" for="defaultCheck1">Mostrar Hechos</label>
+        </div>
+      </div>
+
+
+
+    </td>
+</tr>
+</tbody> -->

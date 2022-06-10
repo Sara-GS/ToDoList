@@ -1,0 +1,30 @@
+<section>
+<table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+        <th scope="col">Tarea</th>
+        <th scope="col">¿Has terminado?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of tasks">
+          <td>{{ task.id }}</td>
+          <td>{{ task.name }}</td>
+          <td>{{ task.end }}
+          <select class="form-select" multiple aria-label="multiple select example">
+            <option selected>¿Has hecho la tarea?</option>
+            <option value="1"  [(ngModel)]="task.end" (change)="editar(task)">Sí</option>
+            <option value="2" [(ngModel)]="task.end"(change)="editar(task)">No</option>
+          </select></td>
+          <td>
+            <button class="btn btn-warning" (click)="Editar(task)">Editar</button>
+            <button class="btn btn-danger" (click)="Delete(task)" style="margin-left: 10px;">Eliminar</button>
+          </td>
+        </tr>
+
+      </tbody>
+      </table>
+    </section>
+
+
